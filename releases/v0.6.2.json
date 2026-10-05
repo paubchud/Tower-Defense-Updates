@@ -1,0 +1,15 @@
+{
+  "version": "0.6.2",
+  "assets": [
+    {
+      "name": "TowerDefense-0.6.2-macOS.zip",
+      "size": 130095301,
+      "sha256": "bb5a584b5aa73d7e1c4d908e5912deb37745276057dbeea5da64173e3a30492e"
+    },
+    {
+      "name": "TowerDefense-0.6.2-Windows.zip",
+      "size": 80451808,
+      "sha256": "cd2b01e40f3b2ee5c149eb6f486a01432f04c834002f4ac7dea252ee35fe7c49"
+    }
+  ]
+}

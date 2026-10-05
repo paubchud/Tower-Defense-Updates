@@ -4,13 +4,14 @@ This repository contains playable downloads, update notes and checksums. **The U
 
 ## Download and play
 
-Current experimental build: **[0.6.1](https://github.com/paubchud/Tower-Defense-Updates/releases/tag/v0.6.1)**. Open **Assets**, download the Windows or macOS ZIP, and extract the entire archive. Do not download GitHub's automatic "Source code" archives: those contain only this repository's instructions and release metadata, not the game.
+Current experimental build: **[0.6.2](https://github.com/paubchud/Tower-Defense-Updates/releases/tag/v0.6.2)**. Open **Assets**, download the Windows or macOS ZIP, and extract the entire archive. Do not download GitHub's automatic "Source code" archives: those contain only this repository's instructions and release metadata, not the game.
 
 - Windows: open `TowerDefense.exe` for guest play. Steam testing uses `Start-Private-Steam-Test.cmd`, or the explicit startup option, with Steam already running.
 - macOS: open `TowerDefense.app`. The Universal build targets Intel and Apple Silicon/macOS12+. It is unsigned/unnotarized and may be blocked by macOS. Approve only this app through macOS's normal per-app security flow if you trust the download; do not disable system security. A real Mac playtest is still required.
 - Choose **Play as Guest** for EOS guest internet play without an Epic/Steam sign-in screen. Steam's explicit development App ID480 is also available. These are separate player pools, with no cross-play.
 - For this update, **four matching-version players** select Warrior or Wizard. One hosts a room and shares its code with three friends; all four click Ready. Use separate accounts/devices for Steam and independent device identities for EOS guests. Two guests under one OS account can share an identity; use LAN/This PC for same-machine testing instead.
 - Keep the host running. Guest rooms are code-selected advertised lobbies, not password-protected private rooms. Current non-host departure resets the remaining lobby; host loss ends the session. Random queues, parties/teams, reconnect grace and host migration are not active yet.
+- Solo local testing: Play -> Warrior/Wizard -> LOCAL PLAYTEST / 3 BOTS -> Ready. Three background local clients move/defend/send/mine/build using normal rules. Your input stays human-controlled. Rematch waits for your vote and fresh Ready; Leave closes the bots. This developer mode runs four processes, uses only your machine, needs no extra online accounts and does not test internet connectivity. Real Mac bot-launch testing remains open.
 
 ## Current prototype
 
