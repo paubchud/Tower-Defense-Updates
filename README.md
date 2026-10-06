@@ -1,26 +1,28 @@
-# Tower Defense multiplayer playtests
+# Tower Defense PVP — Experimental playtests
 
-This repository contains playable downloads, update notes and checksums. **The Unity source and its Git history are not included.** You do not need Unity or access to the source repository to play.
+Playable downloads, update notes and checksums. Unity source and Git history stay private; neither Unity nor source access is needed to play.
 
 ## Download and play
 
-Current experimental build: **[0.6.2](https://github.com/paubchud/Tower-Defense-Updates/releases/tag/v0.6.2)**. Open **Assets**, download the Windows or macOS ZIP, and extract the entire archive. Do not download GitHub's automatic "Source code" archives: those contain only this repository's instructions and release metadata, not the game.
+Current experimental build: **[0.7.0](https://github.com/paubchud/Tower-Defense-Updates/releases/tag/v0.7.0)**. Download the Windows or macOS ZIP under **Assets** and extract the entire archive. GitHub's automatic source archives contain only public instructions/metadata.
 
-- Windows: open `TowerDefense.exe` for guest play. Steam testing uses `Start-Private-Steam-Test.cmd`, or the explicit startup option, with Steam already running.
-- macOS: open `TowerDefense.app`. The Universal build targets Intel and Apple Silicon/macOS12+. It is unsigned/unnotarized and may be blocked by macOS. Approve only this app through macOS's normal per-app security flow if you trust the download; do not disable system security. A real Mac playtest is still required.
-- Choose **Play as Guest** for EOS guest internet play without an Epic/Steam sign-in screen. Steam's explicit development App ID480 is also available. These are separate player pools, with no cross-play.
-- For this update, **four matching-version players** select Warrior or Wizard. One hosts a room and shares its code with three friends; all four click Ready. Use separate accounts/devices for Steam and independent device identities for EOS guests. Two guests under one OS account can share an identity; use LAN/This PC for same-machine testing instead.
-- Keep the host running. Guest rooms are code-selected advertised lobbies, not password-protected private rooms. Current non-host departure resets the remaining lobby; host loss ends the session. Random queues, parties/teams, reconnect grace and host migration are not active yet.
-- Solo local testing: Play -> Warrior/Wizard -> LOCAL PLAYTEST / 3 BOTS -> Ready. Three background local clients move/defend/send/mine/build using normal rules. Your input stays human-controlled. Rematch waits for your vote and fresh Ready; Leave closes the bots. This developer mode runs four processes, uses only your machine, needs no extra online accounts and does not test internet connectivity. Real Mac bot-launch testing remains open.
+- Windows: open `TowerDefense.exe` for guest play. Steam testing uses `Start-Private-Steam-Test.cmd` or the explicit startup option, with Steam running.
+- macOS: open `TowerDefense.app`. Universal Intel/Apple Silicon, macOS 12+, unsigned/unnotarized. If blocked, use the normal per-app macOS approval flow only if you trust the download. Real Mac execution/bot startup still needs testing.
+- Choose Play as Guest for EOS internet rooms. Steam development App ID 480 is a separate pool, with no Steam/guest cross-play. All players need matching builds, separate Steam accounts/devices or independent guest identities. For same-machine testing use the local playtest, not duplicate online identities.
+- Choose Warrior or Wizard, host a normal room and share its code. **Two humans can both Ready to start.** For four-player free-for-all, have all four join before readying. Three humans wait for a fourth. Empty seats remain empty; running matches reject late joins.
+- Solo: Play -> class -> LOCAL PLAYTEST / 3 BOTS -> Ready. This uses three background local clients and does not admit friends or fill internet rooms. Rematch waits for your vote and fresh Ready; Leave closes the bots. Mixed friend/bot rooms are deferred.
+- Keep the host running. Non-host departure resets the remaining lobby; host loss ends the session. Guest rooms are code-selected advertised lobbies. Queues, parties/teams, reconnect grace and host migration remain inactive.
 
-## Current prototype
+## Controls and gameplay
 
-1v1v1v1 on a blocky four-sector map. Send costs1gold total for one troop per surviving enemy castle; castles start at30points and lose1 per arrival. Defend, mine grey rocks for stone, buy plots/build towers, invade visible enemy nodes and fight living heroes. Hero-only Player XP and separate level points use temporary test values. Other wiki content remains planned; synergies/In-game Upgrades and non-rock resource mechanics are inactive.
+WASD moves; middle-drag orbits the centered camera; wheel selects Weapon/Army/Quick tower upgrade. Left mouse uses the selected slot. Right-click land, towers and resources to manage them. I opens Equipment, G opens automation upgrades, Esc opens the menu while the match continues.
 
-WASD moves; right-drag orbits the hero-centered camera; wheel selects the hotbar. Left mouse attacks, E/pickaxe mines, T sends, U upgrades future troops, B manages land/towers, I shows equipment, G opens the inactive upgrade tab. Ghosts cannot attack, mine or scout. All four rematch votes return to fresh ready-up.
+Castles begin at 30 points and lose one per arriving troop. Sending costs 1 gold total, delivering one troop to each surviving participating enemy. Weapon attacks gather visible wood/stone/iron/gold/diamond reserves. Both heroes can build the five selected towers and purchase their five stages; undefined WIP effects remain inactive. Automation unlocks are per resource type; individual visited mines have separate material costs. See the versioned release notes for exact temporary costs and limits.
+
+Normal hero death gives a timed own-side ghost with management but no attacks, collection or scouting. Castle elimination allows full-map camera viewing with no match actions; enemy wallets and private mining progress stay private. All participating rematch votes return to a fresh ready-up lobby. Progression is match-only; no permanent rewards or paid power are active.
 
 ## Feedback and recovery
 
-Report version, platform, provider, host/client role, reproduction steps and relevant Player.log excerpts in [Issues](https://github.com/paubchud/Tower-Defense-Updates/issues). Never post account credentials or private configuration. Test builds are experimental; real four-device internet play, balance, Mac execution and long-soak performance remain open gates.
+Report version/platform/provider, host/client role, player count, steps, expected/actual behavior and redacted logs in [Issues](https://github.com/paubchud/Tower-Defense-Updates/issues). Never post credentials or private configuration.
 
-Older published version tags and ZIPs stay fixed for rollback. Each `releases/vVERSION.json` lists the complete ZIP sizes and SHA256 checksums. This public repository holds **only instructions, release notes and checksums** in Git; game binaries are attached under Releases, not committed into its file history.
+These are experimental builds. The host can access full match authority; real-device internet, Mac execution, balance, long-soak, uncapped GPU and physical-wire checks remain open. Older fixed tags/ZIPs remain for rollback. Public Git contains only instructions, release notes and artifact checksums; playable binaries are Release assets. Each `releases/vVERSION.json` records ZIP sizes and SHA256.
