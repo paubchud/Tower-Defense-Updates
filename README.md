@@ -4,13 +4,13 @@ Playable downloads, update notes and checksums. Unity source and Git history sta
 
 ## Download and play
 
-Current experimental Windows build: **[0.7.8](https://github.com/paubchud/Tower-Defense-Updates/releases/tag/v0.7.8)**. Download the Windows ZIP under **Assets** and extract the entire archive. GitHub's automatic source archives contain only public instructions/metadata. The latest paired macOS build remains the older [0.7.0 release](https://github.com/paubchud/Tower-Defense-Updates/releases/tag/v0.7.0).
+Current experimental Windows build: **[0.7.9](https://github.com/paubchud/Tower-Defense-Updates/releases/tag/v0.7.9)**. Download the Windows ZIP under **Assets** and extract the entire archive. GitHub's automatic source archives contain only public instructions/metadata. The latest paired macOS build remains the older [0.7.0 release](https://github.com/paubchud/Tower-Defense-Updates/releases/tag/v0.7.0).
 
 - Windows: open `TowerDefense.exe` for guest play. Steam testing uses `Start-Private-Steam-Test.cmd` or the explicit startup option, with Steam running.
-- macOS 0.7.0: open `TowerDefense.app`. Universal Intel/Apple Silicon, macOS 12+, unsigned/unnotarized. It is not compatible with Windows 0.7.8 rooms. If blocked, use the normal per-app macOS approval flow only if you trust the download. Real Mac execution/bot startup still needs testing.
+- macOS 0.7.0: open `TowerDefense.app`. Universal Intel/Apple Silicon, macOS 12+, unsigned/unnotarized. It is not compatible with Windows 0.7.9 rooms. If blocked, use the normal per-app macOS approval flow only if you trust the download. Real Mac execution/bot startup still needs testing.
 - Choose Play as Guest for EOS internet rooms. Steam development App ID 480 is a separate pool, with no Steam/guest cross-play. All players need matching builds, separate Steam accounts/devices or independent guest identities. For same-machine testing use the local playtest, not duplicate online identities.
 - Choose Warrior or Wizard, host a normal room and share its code. **Two humans can both Ready to start.** For four-player free-for-all, have all four join before readying. Three humans wait for a fourth. Empty seats remain empty; running matches reject late joins.
-- Friend plus bots on Windows 0.7.8: after exactly one friend fully joins your hosted room, the host can choose Add 2 Bots. Both humans personally Ready after the bots arrive. Cancel/remove bots stays in the human room, and bot loss returns the room to a clean retry state.
+- Friend plus bots on Windows 0.7.9: with two fully joined humans, the host can choose Add 2 Bots; with three, the host can choose Add 1 Bot. Every human personally Readies after the selected bots arrive. Cancel/remove bots stays in the human room, and bot loss returns the room to a clean retry state.
 - Solo: Play -> class -> LOCAL PLAYTEST / 3 BOTS -> Ready. This uses three background local clients and does not admit friends or fill internet rooms. Rematch waits for your vote and fresh Ready; Leave closes the bots.
 - Keep the host running. Non-host departure resets the remaining lobby; host loss ends the session. Guest rooms are code-selected advertised lobbies. Queues, parties/teams, reconnect grace and host migration remain inactive.
 
